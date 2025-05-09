@@ -1,0 +1,36 @@
+{
+  // 💡 Inputs are prompted on first server start, then stored securely by VS Code.
+  "inputs": [],
+  "servers": {
+    // https://github.com/microsoft/playwright-mcp
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--vision"
+      ]
+    },
+    "langgraph-docs-mcp": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "mcpdoc",
+        "mcpdoc",
+        "--urls",
+        "LangGraph:https://langchain-ai.github.io/langgraph/llms.txt LangChain:https://python.langchain.com/llms.txt",
+        "--transport",
+        "stdio"
+      ]
+    },
+    "Azure MCP Server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@azure/mcp@latest",
+        "server",
+        "start"
+      ]
+    },
+  }
+}
