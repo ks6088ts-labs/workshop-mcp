@@ -12,6 +12,7 @@
 - [Specification and documentation for the Model Context Protocol](https://github.com/modelcontextprotocol/specification)
 - [Part1 : Azure AI Foundry で MCP を使ってみた【深掘りと最新動向調査】](https://zenn.dev/chips0711/articles/e71b088f26f56a)
 - [Part2 : Azure AI Foundry で MCP を使ってみた【深掘りと最新動向調査】](https://zenn.dev/chips0711/articles/ba72417a1f6c34)
+- [Use MCP servers in VS Code (Preview) > Add an MCP server to your workspace](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server-to-your-workspace)
 
 ### Samples
 

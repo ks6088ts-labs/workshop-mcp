@@ -1,0 +1,15 @@
+{
+  // 💡 Inputs are prompted on first server start, then stored securely by VS Code.
+  "inputs": [],
+  "servers": {
+    // https://github.com/microsoft/playwright-mcp
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--vision"
+      ]
+    },
+  }
+}
