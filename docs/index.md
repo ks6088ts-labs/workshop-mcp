@@ -1,1 +1,1 @@
-# template-python
+# workshop-mcp
