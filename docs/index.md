@@ -28,3 +28,4 @@
 - [AWS MCP Servers](https://github.com/awslabs/mcp)
 - [Azure MCP Server](https://github.com/Azure/azure-mcp)
 - [GitHub MCP Server](https://github.com/github/github-mcp-server)
+- [MCP LLMS-TXT Documentation Server](https://github.com/langchain-ai/mcpdoc)
