@@ -1,6 +1,13 @@
 {
   // 💡 Inputs are prompted on first server start, then stored securely by VS Code.
-  "inputs": [],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "github_token",
+      "description": "GitHub Personal Access Token",
+      "password": true
+    }
+  ],
   "servers": {
     // https://github.com/microsoft/playwright-mcp
     "playwright": {
@@ -31,6 +38,16 @@
         "server",
         "start"
       ]
+    },
+    // GitHub's official MCP Server: https://github.com/github/github-mcp-server?tab=readme-ov-file#usage-with-vs-code
+    "github": {
+      "command": "github-mcp-server",
+      "args": [
+        "stdio",
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
+      }
     },
   }
 }
