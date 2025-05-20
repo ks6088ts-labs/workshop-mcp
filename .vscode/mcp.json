@@ -9,15 +9,12 @@
     }
   ],
   "servers": {
-    // https://github.com/microsoft/playwright-mcp
+    // Playwright MCP server: https://github.com/microsoft/playwright-mcp
     "playwright": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@playwright/mcp@latest",
-        "--vision"
-      ]
+      "args": ["-y", "@playwright/mcp@latest", "--vision"]
     },
+    // MCP LLMS-TXT Documentation Server: https://github.com/langchain-ai/mcpdoc
     "langgraph-docs-mcp": {
       "command": "uvx",
       "args": [
@@ -30,24 +27,30 @@
         "stdio"
       ]
     },
-    "Azure MCP Server": {
+    // Azure MCP Server: https://github.com/Azure/azure-mcp
+    "azure": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@azure/mcp@latest",
-        "server",
-        "start"
-      ]
+      "args": ["-y", "@azure/mcp@latest", "server", "start"]
     },
-    // GitHub's official MCP Server: https://github.com/github/github-mcp-server?tab=readme-ov-file#usage-with-vs-code
+    // GitHub MCP Server: https://github.com/github/github-mcp-server?tab=readme-ov-file#usage-with-vs-code
     "github": {
-      "command": "github-mcp-server",
+      "command": "docker",
       "args": [
-        "stdio",
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
       ],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
       }
     },
+    // Terraform MCP Server: https://github.com/hashicorp/terraform-mcp-server
+    "terraform": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "hashicorp/terraform-mcp-server"]
+    }
   }
 }
