@@ -51,6 +51,10 @@
     "terraform": {
       "command": "docker",
       "args": ["run", "-i", "--rm", "hashicorp/terraform-mcp-server"]
+    },
+    // FastAPI MCP Server:
+    "fastapi-mcp": {
+      "url": "http://localhost:8000/mcp"
     }
   }
 }
